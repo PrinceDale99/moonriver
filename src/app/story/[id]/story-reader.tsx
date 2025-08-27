@@ -60,7 +60,7 @@ export default function StoryReader({ storyId, initialStory }: { storyId: string
 
   React.useEffect(() => {
     if (story) {
-      // Split content by chapter headings. Assumes chapters are separated by <hr> and start with <h2>
+      // Split content by chapter headings. Assumes chapters are separated by <hr>
       const chapterParts = story.content.split(/<hr[^>]*>/);
       const storyChapters = chapterParts.slice(1); // Remove content before the first <hr>
       setChapters(storyChapters);
@@ -137,7 +137,7 @@ export default function StoryReader({ storyId, initialStory }: { storyId: string
           lineHeight: settings.lineHeight,
         }}
       >
-        <div className="container max-w-3xl mx-auto p-4 sm:p-8 lg:py-24">
+        <div className="container max-w-3xl mx-auto p-4 sm:p-8 lg:py-24 pb-32">
             <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold font-headline mb-2" style={{ lineHeight: 1.2 }}>
                 {story.title}
             </h1>
