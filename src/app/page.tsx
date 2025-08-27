@@ -36,21 +36,24 @@ export default function Home() {
   const handleFileUpload = (event: React.ChangeEvent<HTMLInputElement>) => {
     const file = event.target.files?.[0];
     if (file) {
-      if (file.type === "text/plain" || file.name.endsWith(".md")) {
+      if (file.type === "text/plain" || file.name.endsWith(".md") || file.type === "text/html" || file.name.endsWith(".html")) {
         const reader = new FileReader();
         reader.onload = (e) => {
           const content = e.target?.result as string;
+          const isHtml = file.type === "text/html" || file.name.endsWith(".html");
           const newStory: Story = {
             id: `uploaded-${Date.now()}`,
-            title: file.name.replace(/\.(txt|md)$/, ""),
+            title: file.name.replace(/\.(txt|md|html)$/, ""),
             author: "You",
             content,
+            isHtml: isHtml,
           };
           
           setStories(prevStories => {
-            const updatedStories = [...prevStories, newStory];
-            localStorage.setItem("moon-river-stories", JSON.stringify(updatedStories.filter(s => s.id.startsWith('uploaded'))));
-            return updatedStories;
+            const uploaded = prevStories.filter(s => s.id.startsWith('uploaded'));
+            const updatedUploaded = [...uploaded, newStory];
+            localStorage.setItem("moon-river-stories", JSON.stringify(updatedUploaded));
+            return [...getStories(), ...updatedUploaded];
           });
         };
         reader.readAsText(file);
@@ -58,7 +61,7 @@ export default function Home() {
         toast({
           variant: "destructive",
           title: "Invalid File Type",
-          description: "Please upload a .txt or .md file.",
+          description: "Please upload a .txt, .md, or .html file.",
         });
       }
     }
@@ -90,7 +93,7 @@ export default function Home() {
           type="file"
           ref={fileInputRef}
           onChange={handleFileUpload}
-          accept=".txt,.md"
+          accept=".txt,.md,.html"
           className="hidden"
         />
       </div>
@@ -110,7 +113,7 @@ export default function Home() {
                   </CardHeader>
                   <CardContent className="flex-grow">
                     <p className="text-muted-foreground line-clamp-4">
-                      {story.content.substring(0, 200)}...
+                      {story.isHtml ? "HTML Content" : `${story.content.substring(0, 200)}...`}
                     </p>
                   </CardContent>
                 </Card>

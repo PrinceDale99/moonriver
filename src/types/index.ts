@@ -4,4 +4,5 @@ export type Story = {
   author: string;
   content: string;
   keywords?: string[];
+  isHtml?: boolean;
 };

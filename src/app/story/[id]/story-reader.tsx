@@ -126,9 +126,13 @@ export default function StoryReader({ storyId }: { storyId: string }) {
                 {story.title}
             </h1>
             <p className="text-lg sm:text-xl text-current/70 mb-12">by {story.author}</p>
-            <div className="prose prose-xl whitespace-pre-wrap font-body">
-              {story.content}
-            </div>
+            {story.isHtml ? (
+              <div className="prose-styles" dangerouslySetInnerHTML={{ __html: story.content }} />
+            ) : (
+              <div className="whitespace-pre-wrap font-body">
+                {story.content}
+              </div>
+            )}
         </div>
       </div>
 

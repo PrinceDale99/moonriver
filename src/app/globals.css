@@ -61,4 +61,11 @@
   body {
     @apply bg-background text-foreground;
   }
+  .prose-styles {
+    font-family: theme('fontFamily.body');
+  }
+  .prose-styles h1, .prose-styles h2, .prose-styles h3, .prose-styles h4, .prose-styles h5, .prose-styles h6 {
+    font-family: theme('fontFamily.headline');
+    line-height: 1.2;
+  }
 }
