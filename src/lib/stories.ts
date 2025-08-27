@@ -1,3 +1,4 @@
+
 import { type Story } from "@/types";
 
 const stories: Story[] = [
@@ -576,22 +577,23 @@ const stories: Story[] = [
   <p>“Until we meet again, mein Freund,” he whispered. “You waited. You knew. Now I can carry you where they cannot follow.”</p><br/><br/>
   
   <p>The sun dropped below the horizon. The light dimmed. The balcony was quiet. One chair still rocked gently. The other was still.</p>
-  <hr>
   
+  <hr>
+
   <h3>THE END.</h3><br/><br/>
   
-  <h4>AUTHOR’S NOTE</h4><br/><br/>
+  <h4><b>AUTHOR’S NOTE</b></h4><br/><br/>
   <p>This story began as a dream I had last year. I set it aside for a long time because school kept me too busy to work on it. In July 2025, I finally returned to it. While finishing the draft, I reworked several parts to bring more emotional depth and give the story its own distinct feel. I don’t usually write novelettes this often, as my focus is primarily on screenplays and film scripts, so this story is ready for adaptation into live-action whenever the timing feels right.</p><br/><br/>
   
-  <h4>ACKNOWLEDGEMENT</h4><br/><br/>
+  <h4><b>ACKNOWLEDGEMENT</b></h4><br/><br/>
   <p>I would like to thank <strong>AIRA PRINCENA</strong> for making me believe that this story could become a novelette.</p><br/><br/>
   
-  <h4>AUTHOR’S BIOGRAPHY</h4><br/><br/>
+  <h4><b>AUTHOR’S BIOGRAPHY</b></h4><br/><br/>
   <p>Prince Dale has been writing stories since the age of five, with a particular passion for horror. He wrote his first novel, Starman, at sixteen, an unpublished work exploring and critiquing the country’s media and showbiz industry. When not writing, he spends his time programming, studying law, and exploring fields such as health sciences.</p><br/><br/>
   
   <hr>
-  <p><small>The title used in this work bears no connection, affiliation, or endorsement by the original creators or rights holders of the song "Moon River," composed by Henry Mancini with lyrics by Johnny Mercer, and is employed solely as a metaphorical device to reflect themes of secrecy, time, and enduring struggle within the narrative.</small></p><br/><br/>
-  <p><small>This is a work of fiction. Names, characters, events and incidents are either the products of the author's imagination or used in a fictitious manner. Any resemblance to actual persons, living or dead is purely coincidental.</small></p>
+  <p><small><b>Disclaimer:</b> The title used in this work bears no connection, affiliation, or endorsement by the original creators or rights holders of the song "Moon River," composed by Henry Mancini with lyrics by Johnny Mercer, and is employed solely as a metaphorical device to reflect themes of secrecy, time, and enduring struggle within the narrative.</small></p><br/><br/>
+  <p><small><b>Disclaimer:</b> This is a work of fiction. Names, characters, events and incidents are either the products of the author's imagination or used in a fictitious manner. Any resemblance to actual persons, living or dead is purely coincidental.</small></p>
 </div>`,
     isHtml: true,
     keywords: ["war", "romance", "germany"],
