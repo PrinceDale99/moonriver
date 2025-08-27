@@ -8,10 +8,10 @@ import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover
 import { Slider } from "@/components/ui/slider";
 import { ToggleGroup, ToggleGroupItem } from "@/components/ui/toggle-group";
 import { Label } from "@/components/ui/label";
-import { ArrowLeft, Cog, Minus, Plus } from "lucide-react";
+import { ArrowLeft, ChevronLeft, ChevronRight, Cog, Minus, Plus } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { Skeleton } from "@/components/ui/skeleton";
-import { getStories, getStory } from "@/lib/stories";
+import { getStories } from "@/lib/stories";
 
 // Client-side only version of getStory
 function getStoryFromBrowser(id: string): Story | undefined {
@@ -54,6 +54,8 @@ export default function StoryReader({ storyId, initialStory }: { storyId: string
     theme: "light",
   });
   const contentRef = React.useRef<HTMLDivElement>(null);
+  const [chapterElements, setChapterElements] = React.useState<HTMLElement[]>([]);
+  const [currentChapterIndex, setCurrentChapterIndex] = React.useState(0);
 
   React.useEffect(() => {
     // If the story wasn't found on the server, try to find it on the client
@@ -85,6 +87,9 @@ export default function StoryReader({ storyId, initialStory }: { storyId: string
       if (savedPosition) {
         contentEl.scrollTop = parseFloat(savedPosition);
       }
+      
+      const chapterNodes = Array.from(contentEl.querySelectorAll('h2'));
+      setChapterElements(chapterNodes);
     }
   }, [story]);
 
@@ -96,6 +101,33 @@ export default function StoryReader({ storyId, initialStory }: { storyId: string
 
   const handleScroll = (e: React.UIEvent<HTMLDivElement>) => {
     saveScrollPosition(e.currentTarget.scrollTop);
+    
+    const contentEl = e.currentTarget;
+    const { scrollTop, clientHeight } = contentEl;
+    const scrollCenter = scrollTop + clientHeight / 2;
+
+    const currentChapter = chapterElements.findIndex((chapterEl, index) => {
+        const nextChapterEl = chapterElements[index + 1];
+        if (nextChapterEl) {
+            return scrollCenter >= chapterEl.offsetTop && scrollCenter < nextChapterEl.offsetTop;
+        }
+        return scrollCenter >= chapterEl.offsetTop;
+    });
+
+    if (currentChapter !== -1 && currentChapter !== currentChapterIndex) {
+        setCurrentChapterIndex(currentChapter);
+    }
+  };
+  
+  const scrollToChapter = (index: number) => {
+    const chapterEl = chapterElements[index];
+    if(chapterEl && contentRef.current) {
+        contentRef.current.scrollTo({
+            top: chapterEl.offsetTop - 50, // a little offset from the top
+            behavior: 'smooth'
+        });
+        setCurrentChapterIndex(index);
+    }
   };
 
   const themeClasses = {
@@ -133,6 +165,8 @@ export default function StoryReader({ storyId, initialStory }: { storyId: string
         </div>
     );
   }
+
+  const hasChapters = chapterElements.length > 0;
 
   return (
     <div className={cn("fixed inset-0 z-50 transition-colors duration-300", themeClasses[settings.theme])}>
@@ -217,6 +251,34 @@ export default function StoryReader({ storyId, initialStory }: { storyId: string
           </PopoverContent>
         </Popover>
       </div>
+
+       {hasChapters && (
+        <div className="fixed bottom-4 left-1/2 -translate-x-1/2 flex items-center justify-center gap-2">
+          <Button
+            variant="ghost"
+            size="icon"
+            onClick={() => scrollToChapter(currentChapterIndex - 1)}
+            disabled={currentChapterIndex === 0}
+            className="rounded-full backdrop-blur-sm bg-black/10 hover:bg-black/20"
+          >
+            <ChevronLeft className="h-5 w-5" />
+            <span className="sr-only">Previous Chapter</span>
+          </Button>
+          <span className="text-sm tabular-nums px-3 py-1.5 rounded-full backdrop-blur-sm bg-black/10">
+            Chapter {currentChapterIndex + 1} / {chapterElements.length}
+          </span>
+          <Button
+            variant="ghost"
+            size="icon"
+            onClick={() => scrollToChapter(currentChapterIndex + 1)}
+            disabled={currentChapterIndex === chapterElements.length - 1}
+            className="rounded-full backdrop-blur-sm bg-black/10 hover:bg-black/20"
+          >
+            <ChevronRight className="h-5 w-5" />
+            <span className="sr-only">Next Chapter</span>
+          </Button>
+        </div>
+      )}
     </div>
   );
 }
