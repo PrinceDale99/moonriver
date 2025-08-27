@@ -2,11 +2,10 @@
 
 import * as React from "react";
 import Link from "next/link";
-import { Book } from "lucide-react";
 import { type Story } from "@/types";
 import { getStories } from "@/lib/stories";
-import { Card, CardHeader, CardTitle, CardDescription, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
+import { ArrowRight } from "lucide-react";
 
 export default function Home() {
   const [story] = React.useState<Story | undefined>(() => {
@@ -28,31 +27,25 @@ export default function Home() {
   }
 
   return (
-    <div className="container mx-auto max-w-3xl p-4 sm:p-6 lg:p-8 flex items-center justify-center min-h-[calc(100vh-56px)]">
-      <div className="w-full">
-        <Card className="transition-all duration-300 hover:shadow-lg bg-card">
-           <Link href={`/story/${story.id}`} legacyBehavior>
-            <a className="block">
-              <CardHeader>
-                <CardTitle className="font-headline tracking-tight flex items-start gap-4">
-                  <Book className="h-8 w-8 shrink-0 text-primary mt-1" />
-                  <span className="text-3xl">{story.title}</span>
-                </CardTitle>
-                <CardDescription className="pl-12">by {story.author}</CardDescription>
-              </CardHeader>
-              <CardContent className="pl-12">
-                <p className="text-muted-foreground line-clamp-4">
-                   {story.isHtml ? "A story of love, war, and the relentless flow of time." : `${story.content.substring(0, 200)}...`}
-                </p>
-              </CardContent>
-            </a>
+    <div className="flex flex-col items-center justify-center min-h-[calc(100vh-56px)] text-center p-4">
+      <div className="max-w-2xl w-full">
+        <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-headline font-bold tracking-tighter text-foreground">
+          {story.title}
+        </h1>
+        <p className="mt-4 text-lg sm:text-xl md:text-2xl text-muted-foreground">
+          by {story.author}
+        </p>
+        <p className="mt-8 max-w-xl mx-auto text-base sm:text-lg text-foreground/80">
+          A story of love, war, and the relentless flow of time, where two souls are bound by a connection forged in the crucible of conflict.
+        </p>
+        <div className="mt-12">
+          <Link href={`/story/${story.id}`}>
+            <Button size="lg" className="text-lg h-12 px-10">
+              Begin Reading
+              <ArrowRight className="ml-2 h-5 w-5" />
+            </Button>
           </Link>
-          <div className="p-6 pt-0 pl-12">
-             <Link href={`/story/${story.id}`}>
-              <Button size="lg">Read Story</Button>
-            </Link>
-          </div>
-        </Card>
+        </div>
       </div>
     </div>
   );
