@@ -6,7 +6,582 @@ const stories: Story[] = [
     id: "moon-river",
     title: "Moon River",
     author: "Prince Dale Limosnero",
-    content: moonRiverHtml,
+    content: `<div>
+  <h1>MOON RIVER</h1>
+  <p><em>Written by: Prince Dale Limosnero</em></p>
+  <hr>
+  
+  <h2>CHAPTER I<br>COLD HANDS, QUIET ROOMS</h2>
+  
+  <p>The memory of the touch was a brand on his skin, a warmth that lingered even as the Rhine’s damp cold seeped through his coat. Friedrich slipped through the back gate, the iron latch clicking shut with a finality that echoed in his chest. The kitchen light was on. Greta.</p>
+  
+  <p>He could see her silhouette through the frosted glass of the door, a patient, waiting cutout against the warm glow. He forced his breathing to slow, willed the hammering in his throat to quiet. He tasted the whiskey on his breath, faint and damning. He scrubbed a hand over his mouth, the rough wool of his glove scraping his lips.</p>
+  
+  <p>The door swung inward before he could reach for it. Greta stood there, not in her nightdress, but still fully dressed, her apron smudged with flour. A bowl of half-kneaded dough sat on the table behind her. She had been waiting, working, worrying.</p>
+  
+  <p>Her eyes, the colour of the river under a flat sky, scanned him. They did not start at his face but at his boots, taking in the clumps of black mud and melted frost, then travelled up his trousers, over his coat, settling finally on his face. She said nothing. The silence was a third presence in the room, thick and cold.</p>
+  
+  <p>“The pressure valve on the primary boiler was sticking,” Friedrich said. The lie was ash in his mouth. “The relief mechanism… it required recalibration. The manual pressure override wasn’t engaging.” He gestured vaguely toward the city. “The entire district could have lost heat.”</p>
+  
+  <p>Greta’s gaze didn’t waver. Her fingers, dusted white with flour, twisted in the hem of her apron. A nervous habit she’d had since they were first married. “At this hour?” Her voice was low, not accusing, but heavy. A simple question weighted with the mass of all the other hours, all the other absences.</p>
+  
+  <p>“A system under pressure does not keep a convenient schedule.” He unbuttoned his coat, the movement stiff. The notebook was a live thing against his heart, its secret heat a stark contrast to the room’s chill. He hung the coat on the peg by the door, turning his body to shield the slight bulge the book made in his inner pocket.</p>
+  
+  <p>She nodded slowly, her eyes dropping to the floor where his melting boots were leaving dark marks on the scrubbed wood. “I saved you some stew.”</p>
+  
+  <p>“I’m not hungry.”</p>
+  
+  <p>“You must be. It’s cold out.” She turned to the stove, her back to him, a dismissal and an invitation all at once. The tension did not break; it merely changed frequency, humming at a pitch only they could hear.</p>
+  
+  <p>Upstairs, the floorboards creaked. One of the boys turning over in sleep. The sound was an anchor, pulling him back into the reality of this house, this life. The smell of yeast and stewed meat. The faint, familiar scent of Greta’s lavender water. These were the elements of his cage, lovingly constructed, unbearably solid.</p>
+  
+  <p>He sat at the table. The wood was smooth under his palms, worn down by years of meals, of homework, of his own absent-minded tracing of its grain. Greta set a bowl before him. The stew was thick, chunks of potato and turnip floating in a rich gravy. He picked up the spoon, his hand steady through a force of will he did not know he possessed.</p>
+  
+  <p>She sat across from him, not eating, just watching. The clock on the mantel ticked. Each click was a stitch sewing him back into the fabric of this domesticity.</p>
+  
+  <p>“The boys asked for you,” she said. “Heinrich wanted help with his mathematics. The quadratic equations.”</p>
+  
+  <p>Friedrich stared into the stew. “I will help him in the morning.”</p>
+  
+  <p>“He went to bed disappointed.”</p>
+  
+  <p>The words were a precise needle, finding the space between his ribs. He saw Heinrich’s face, so serious for ten years old, frowning at his slate. He had promised. And then the note had come, a folded square of paper slipped into his hand at the plant by a young apprentice who didn’t know what it contained. A single letter, R, and a time. A summons he was powerless to resist.</p>
+  
+  <p>“I am here now,” he said, the words utterly inadequate.</p>
+  
+  <p>“Yes,” Greta said. “You are.”</p>
+  
+  <p>He ate a spoonful of stew. It was perfectly seasoned, warm, nourishing. It tasted like dust.</p>
+  
+  <p>His mind drifted, treacherously, to the riverbank. The way the moonlight had caught the sharp line of his jaw. The low timbre of his voice, a sound that vibrated in Friedrich’s bones. The brief, electrifying press of his shoulder against Friedrich’s own as they huddled over the lantern. The man whose name he could not even think in this house, whose existence was a ghost in the room. Rudolf. The name was a prayer and a curse.</p>
+  
+  <p>A memory, sharp and unbidden: <em>France, 1916</em>. The mud of the Somme, a cold, sucking graveyard. The constant thunder of the <em>Feldkanone 96</em> and the <em>schwere Feldhaubitze 13</em> shaking the world. The coppery smell of blood and the chemical tang of cordite. He’d been crouched in a waterlogged trench, his uniform stiff with filth, his hands raw, trying to get a damp match to light. A shadow fell over him. Not an officer. Another soldier, his face streaked with grime, eyes startlingly blue in the gloom.</p>
+  
+  <p>“Here,” the man had said, his voice rough. He’d offered a light from his own cigarette, the glow illuminating the strong bones of his face for a fleeting second. Their fingers had brushed. In that hellscape, the simple human contact had been a jolt of something pure, something unbearably vital. It was the first time he had seen Rudolf Wagner.</p>
+  
+  <p>The memory was a physical blow. Friedrich’s spoon clattered against the bowl.</p>
+  
+  <p>Greta jumped. “Friedrich?”</p>
+  
+  <p>“Tired,” he mumbled, pushing the bowl away. “The boiler… it was a long night.”</p>
+  
+  <p>She looked at him, and for a terrifying moment, he thought she could see it all; the river, the frost, the stolen whiskey, the blue eyes that had looked at him not with wifely concern but with a shared, desperate hunger. She could see the ghost of the front lines that still connected them, a bond forged in mud and death that was stronger, more visceral, than anything in this warm, clean kitchen.</p>
+  
+  <p>But her eyes just softened with a weary resignation. “Go to bed then. I’ll clean this.”</p>
+  
+  <p>He stood, his legs unsteady. He wanted to touch her, to offer some gesture of comfort, of penance. But his hand felt like a betrayer’s hand. Anything it touched would be contaminated by the memory of another’s touch.</p>
+  
+  <p>He climbed the stairs, each step a mountain. He passed the boys’ room, pausing to listen to their even breathing. His heart ached with a love so fierce it was a pain. He loved them. He loved Greta. It was a real, solid thing, this love. But it existed in a different world from the one that existed down by the river. They were parallel lines, his two lives, destined never to touch, and the tension of holding them both was splitting him in two.</p>
+  
+  <p>In his room, he shut the door and leaned against it. He fumbled in his coat pocket, pulling out the notebook. The cheap leather cover was damp from the mist. He opened it, his fingers trembling.</p>
+  
+  <p>The page was blank where he had hoped to find new words. The encounter had left him empty, drained of everything but a shaking need. He could still smell the river on the pages, and beneath it, a faint trace of Rudolf’s shaving soap–<em>Pears</em>, a sharp, clean scent utterly foreign to this house.</p>
+  
+  <p>He took his pencil from the bedside table. The lead was worn down. He pressed it to the paper. He did not write a name. He did not write a confession. He wrote a single line, a stark and terrible truth that came from a place deeper than poetry.</p>
+  
+  <p><em>I am a room with two keys, and neither fits the lock.</em></p>
+  
+  <p>Downstairs, he heard the gentle clatter of a bowl being washed, the quiet sigh of a woman alone in a kitchen. The sound was a hook in his heart, pulling him back. He closed the notebook and hid it beneath a loose floorboard under the bed. He lay down in the dark, fully clothed, and stared at the ceiling.</p>
+  
+  <p>The moon, which had silvered the river, now cast a pale, accusatory rectangle through his window. It was the same moon that had witnessed his betrayal. It was the same moon that would, he knew, illuminate his walk to the municipal plant in a few short hours, where he would spend the day tending the massive boilers, their immense pressures a comforting, simple problem he could actually solve.</p>
+  
+  <p>He closed his eyes, but there was no sleep. Only the relentless flow of the river, and the image of a pair of blue eyes that held the reflection of a man he could never truly be.</p>
+  <hr>
+  
+  <h2>CHAPTER II<br>RIVERBLOOD</h2>
+  
+  <p>The house was a cage of warm, sleeping sounds. Greta’s even breath beside him, a soft rhythm of trust he had already broken. From the next room, the boys’ sleep-noises: Heinrich’s faint, determined muttering about chemical valencies, Franz’s light snore. The air held the day’s residue; coal smoke, the yeasty ghost of risen dough, the faint, clean scent of the lavender sachets Greta tucked into their drawers. A good home. A life built, brick by careful brick.</p>
+  
+  <p>He stared at the water stain on the ceiling, a continent of shadow in the dimness. His right thumb worried the callus on his left palm, a nervous habit from years of turning wrenches, tightening bolts on steam lines under pressure. The notebook was a live coal under the mattress, its heat searing through the straw ticking, through the wool blanket, into the skin of his back. He had not written his name. Not ever. The poems were about light on water, about the pull of a current, about the structural integrity of stone under relentless flow. Engineering metaphors. A language of deflection. But he knew. And if Greta ever found it, she would know too.</p>
+  
+  <p>He rolled onto his side, the bed ropes groaning. His heart was a frantic piston in his chest. Her question from yesterday recalled, precise as a machinist’s tap. ‘Are you meeting someone, Friedrich?’ Casual, over the darning of his sock. Her eyes had not been casual. They had been microscopes, focusing on the minute fractures in his story; the mud on his boots that was river silt, not factory soot; the faint, unfamiliar scent of Pears shaving soap that clung to his coat from a proximity he could never explain.</p>
+  
+  <p>The boys stirred. Franz murmured a string of numbers; a quadratic formula. Heinrich, in the bed beside him, answered with a sleepy, “The coefficient is wrong.” Their minds, two bright, clean engines, purring in the dark. And him, their father, a man of pressure and steam, his own mind a tangled snarl of conductive wires, sparking with a forbidden current.</p>
+  
+  <p>He slid from the bed. The floorboard under his foot gave its familiar, treacherous creak. He froze, listening. Greta’s breathing hitched, then settled. Downstairs, the clock ticked. He pulled on his trousers, his woollen shirt, his coat still damp and cold from the outside. He did not light a lamp.</p>
+  
+  <p>Outside, the cold was a physical blow. It iced the inside of his nose, sharpened the air in his lungs. Frost feathered the cobblestones, glittering under a hard, high moon. His breath plumed, a ghost preceding him. He moved through the sleeping city like a flaw in the machinery, a rogue current in a designed circuit. Every shadow was a potential witness. Every sound; the scuttle of a cat, the distant clang of a tram shunting, a potential alarm.</p>
+  
+  <p>The river’s voice grew, a low, continuous rumble beneath the city’s silence. It smelled of cold stone and deep, moving water, of things hidden and carried away.</p>
+  
+  <p>He saw the shape then, leaning against the levee wall where the willows hung bare. Not a shadow, but a man. Rudolf. His collar was turned up, his hands deep in the pockets of his greatcoat. The moonlight caught the sharp angle of his cheekbone, the pale gleam of his eyes. He held a storm lantern, its shutter cracked just enough to cast a frail, trembling puddle of light at his feet.</p>
+  
+  <p>Friedrich’s approach was silent, but Rudolf turned his head. He always knew.</p>
+  
+  <p>“You’re shaking,” Rudolf said. His voice was low, a vibration in the cold air, devoid of accusation. It was a statement of fact, an observation of a system under stress.</p>
+  
+  <p>“The cold,” Friedrich lied, his teeth wanting to chatter. He clutched the notebook through his coat. “And… Greta. She’s asking questions.”</p>
+  
+  <p>Rudolf’s gaze didn’t waver. The blue of his eyes was almost black in the moonlight. “What did you tell her?”</p>
+  
+  <p>“The boilers. The primary pressure valve on the Rankine-cycle engine was sticking. I told her the manual override failed, that the district could have lost heat.” The technical jargon spilled out, a shield of specifics. “I had to recalibrate the Bourdon gauge, check the condensate return pumps…”</p>
+  
+  <p>Rudolf listened, his expression unreadable. He understood the language. He was an architect, a man of lines and stresses. He understood the need for a plausible design. “And did she believe the schematic?”</p>
+  
+  <p>Friedrich looked away, towards the river. The water was a sheet of darkened silver, moving, always moving. “I don’t know.”</p>
+  
+  <p>A moment of silence, filled only by the river’s murmur. Then Rudolf shifted, his shoulder brushing against Friedrich’s. The contact was electric, a jolt of pure voltage that bypassed all logic, all fear. Friedrich’s breath caught.</p>
+  
+  <p>“I got your note,” Rudolf said softly. “The one about the river.”</p>
+  
+  <p><em>The River at Night</em>. The words he had scribbled, his hand trembling not from cold but from the terrifying need to confess. Your eyes, dark pools. I reach, and it flows beyond me.</p>
+  
+  <p>“It’s just words,” Friedrich whispered, the confession sounding feeble.</p>
+  
+  <p>“No.” Rudolf’s voice was firm. “It’s not.”</p>
+  
+  <p>He reached into his own coat and pulled out a flask. Not whiskey this time. Water. He drank, then offered it. Friedrich took it, his fingers brushing against Rudolf’s. The water was ice-cold. It tasted of metal and of the tin flask. It tasted, he imagined, of Rudolf’s lips.</p>
+  
+  <p>Memory slammed into him, not a gentle bleed but a catastrophic rupture. France, 1916. Not the Somme, but Verdun. The air thick with the chalky dust of pulverized limestone and the sweet-rot stench of corpses caught in the wire. The deafening, repetitive thunder of the <em>Mörser 16</em> battering the landscape. He was knee-deep in mud and something worse, trying to shore up a collapsing sap trench with a fractured timber. Useless. A waste of good engineering. A shell screamed in, the sound tearing the world in two. He’d thrown himself flat, his face in the mud, waiting for the shrapnel to scythe through him.</p>
+  
+  <p>The impact was a earthquake. Dirt and stone rained down. Silence, then the ringing in his ears. He pushed himself up, spitting mud. And there, five meters away, was the same soldier from the Somme. Rudolf. He was on his knees, not praying, but methodically checking the breech of a field gun, his face a mask of grime and concentration, utterly focused on the machine amidst the chaos. As Friedrich watched, Rudolf looked up. Their eyes met across the hellscape. And in that moment, it wasn’t recognition. It was a shared, desperate understanding of the insanity, a silent acknowledgment that the only thing that made sense was the cold, precise logic of the machinery they served. It was the second time. The bond forged not in a glance, but in a shared, silent scream against the absurdity.</p>
+  
+  <p>The memory was so vivid he could smell the cordite, feel the mud sucking at his boots. He gasped, pulling himself back to the riverbank, to the cold, to the man beside him.</p>
+  
+  <p>Rudolf was watching him, his head tilted. “You went away,” he said quietly.</p>
+  
+  <p>“Verdun,” Friedrich breathed, the word itself a crater.</p>
+  
+  <p>Rudolf’s eyes darkened. He gave a single, sharp nod. He didn’t need to say he’d been there too. They both knew the map of that particular hell by heart.</p>
+  
+  <p>The shared silence was heavier than any words. It was a bridge made of mud and memory, spanning the years between the nightmare then and the fragile, dangerous peace of now.</p>
+  
+  <p>A sound. Not a dog. Not the wind. The deliberate, synchronized crunch of boot heels on frost. Too heavy for a civilian. Too orderly.</p>
+  
+  <p>Friedrich’s blood went colder than the river. He dropped into a crouch, pulling Rudolf down with him behind the scant cover of the levee wall. His heart was a trip-hammer against his ribs. Peering through a gap in the stone, he saw them. Four men. Not Russian. German. <em>Feldgendarmerie</em>. Field Police. Their <em>Gewehr 98</em> rifles slung, but their postures were alert, searching. One of them held a lantern, its beam sweeping the frozen ground.</p>
+  
+  <p>“...thought I saw a light down here,” one muttered, his voice carrying clearly in the still air. “Dresden Patrol reported suspicious activity by the river. Could be those Spartacist agitators from the plant.”</p>
+  
+  <p>Friedrich’s mouth went dry. <em>Spartacists</em>. The word was a death sentence these days. An excuse for any nighttime questioning. His mind raced, calculating angles of escape, probabilities of detection. The notebook in his pocket felt like a brick of condemned evidence. Poems about river currents were not a credible alibi.</p>
+  
+  <p>Rudolf’s hand closed over his wrist. His grip was iron-steady. He didn’t look at Friedrich; his eyes were fixed on the soldiers, tracking their movement. He pointed with his chin; a narrow gap between two warehouses, a path that led back into the tangled, dark streets of the Neustadt. It was a risk. A dead end could trap them.</p>
+  
+  <p>The lantern beam swept closer, glinting off the icy stones near their feet.</p>
+  
+  <p>Rudolf moved first, a silent, fluid shadow. Friedrich followed, his every sense screaming. They kept low, using the wall as a shield, their progress measured in inches. The crunch of their own footsteps sounded like gunshots in his ears. He could hear the soldiers’ voices, closer now, arguing about the football match between <em>Dresdensia SC</em> and <em>BC Hartha</em>.</p>
+  
+  <p>They reached the alley mouth and slipped into the deeper darkness. Friedrich’s lungs burned. They didn’t stop running until they were two streets over, pressed into the recessed doorway of a closed haberdashery, the smell of wet wool and old wood enveloping them.</p>
+  
+  <p>Friedrich bent double, hands on his knees, sucking in great gulps of the freezing air. The fear was a chemical taste in his mouth, sharp and familiar. It was the taste of the front.</p>
+  
+  <p>Rudolf stood straight, listening, his head cocked. After a long moment, he relaxed marginally. “They’re gone.”</p>
+  
+  <p>Friedrich straightened up. The adrenaline was fading, leaving a hollow, shaking exhaustion in its place. The reality of what had nearly happened crashed down on him. Discovery. Arrest. The end of everything. For a moment, he saw Greta’s face, not suspicious, but shattered. He saw his boys, fatherless, their name disgraced.</p>
+  
+  <p>He looked at Rudolf, who was watching him with that same unnerving calm. “This is…” Friedrich began, but the words failed. Insane. Suicidal. Impossible.</p>
+  
+  <p>“I know,” Rudolf said again. He reached out and, with a gesture so fleeting it might have been an accident, brushed a speck of dirt from the lapel of Friedrich’s coat. The touch was a spark in the darkness. “Tomorrow?” he asked, his voice barely a whisper.</p>
+  
+  <p>The word was out before Friedrich could stop it, before duty, fear, or reason could intervene. “Tomorrow.”</p>
+  
+  <p>He watched Rudolf melt back into the shadows, becoming just another part of the night. Then he turned and began the long, cold walk home. The moon was lower now, its light weak and grey. Dawn was a smear of tarnished silver on the horizon.</p>
+  
+  <p>He slipped back into the house. The kitchen was cold. The clock ticked. He stood there for a long time, listening to the silence, feeling the immense, crushing pressure of his two lives squeezing him into nothing.</p>
+  
+  <p>Upstairs, he did not go to the bedroom. He went to the boys’ room and stood in the doorway, watching them sleep. Franz had kicked off his covers. Friedrich stepped in and pulled the blanket back up, his hand lingering on his son’s warm shoulder. The love was a physical pain.</p>
+  
+  <p>Back in his own room, he knelt and pulled the notebook from its hiding place. He did not open it. He just held it, the cheap leather cool against his skin. The first, faint light of morning was seeping through the window, revealing the dust on the floorboards, the cracks in the plaster.</p>
+  
+  <p>It was not a new day. It was the same day, continued. The pressure had not eased. The system was still critical. He was the faulty valve, and he knew it was only a matter of time before the whole thing blew.</p>
+  <hr>
+  
+  <h2>CHAPTER III<br>THE OFFER</h2>
+  
+  <p>The world returned in fragments, a shattered mosaic of pain and cold. First, the smell: ozone, old grease, and the sharp, metallic tang of fresh blood. Then, the cold, a deep, bone-ache that had little to do with the outside frost. It was the cold of polished concrete, of uninsulated iron. A mechanical chill. His head throbbed, a dull, percussive agony centered just above his right ear. He tried to lift a hand to touch it, but his wrists were bound behind his back, secured to the legs of the heavy wooden chair he sat on. The rope was coarse, hemp, biting into his skin.</p>
+  
+  <p>He forced his eyes open. The light was a single, bare electric bulb hanging from a cord, swaying slightly and casting long, shifting shadows. The room was a cellar or a repurposed storage vault, windowless, its walls lined with shelves cluttered with mechanical detritus: vacuum tubes, spools of copper wire, jars of murky chemicals; sulfuric acid, nitric acid, their labels peeling. A workbench ran along one wall, scattered with calipers, micrometers, and the intricate guts of a dismantled field radio. This was not a standard prison cell. This was a workshop.</p>
+  
+  <p>Two men stood over him. Not the rough-hewn infantrymen who had captured him. These men wore the darker, better-tailored uniforms of officers, but their insignia were unfamiliar. Technicians. Scientists. One was older, his face a web of fine lines, his eyes magnified by thick spectacles. The other was younger, with a neatly trimmed beard and a restless energy, his fingers tapping against a leather-bound notebook.</p>
+  
+  <p>The older man spoke in precise, academic German. “You are awake. Good. The cranial impact was calculated to be sub-concussive. A calculated risk.” He leaned closer, his spectacles reflecting the bulb’s stark light, turning his eyes into white, blank discs. “You are Engineer Friedrich Schumann. You were maintaining the pump systems for the Feldbahn locomotives. Your work is… meticulous.”</p>
+  
+  <p>Friedrich said nothing. His mouth was dry, his tongue a useless piece of leather. He tested the bonds again. They held fast.</p>
+  
+  <p>The younger man stepped forward. “Your reaction was interesting. Panic fire is common. But your second shot… you cycled the bolt of the <em>Mauser 98</em> with remarkable speed. A practiced motion. And then you aimed. Not at the man threatening you, but at the soldier standing over your… comrade.” He consulted his notebook. “Gefreiter Rudolf Wagner. You sought to neutralize the immediate threat to him. A prioritization of targets. Instinctual. Or perhaps not.”</p>
+  
+  <p>A cold deeper than the room’s chill seeped into Friedrich’s veins. They had been watching. They had seen everything.</p>
+  
+  <p>“We are not interested in your court-martial,” the older man said, as if reading his thoughts. “A soldier brawling with his captors is a triviality. We are interested in you. Your file from the Western Front notes an aptitude for pressure systems. You kept the boilers running at Verdun under artillery bombardment. A feat of some note.”</p>
+  
+  <p>He moved to the workbench and picked up a complex assembly of glass coils and copper electrodes. It buzzed faintly, a low, dangerous frequency that vibrated in Friedrich’s teeth. “The new war is not one of trenches. It is a war of energy. Of conversion.” He gestured with the device. “This is a crude cyclotron. It accelerates charged particles. Alpha particles, specifically. Helium nuclei. The work of Rutherford, refined.”</p>
+  
+  <p>Friedrich stared. <em>The words were insane. This was a battlefield, not a university laboratory.</em></p>
+  
+  <p>The younger man smiled, a thin, bloodless expression. “You understand pressure. Contained force. The relationship between voltage and amperage. The properties of materials under stress. These principles are universal. They apply to steam… and to other, more potent forces.”</p>
+  
+  <p>The older man placed the buzzing device back on the bench. “The Tsar is gone. Russia is chaos. This presents… opportunities. The old rules do not apply here. We are mapping a new territory of physics. And we require minds that understand systems. Not theorists. Engineers.”</p>
+  
+  <p>He turned his blank, spectacled eyes back to Friedrich. “Your choice is simple. You can be shot as a prisoner of war. A footnote. Or you can assist us. Your knowledge of boiler pressure and magnetic containment fields is… transferable.”</p>
+  
+  <p>The words hung in the cold air. Magnetic containment fields. The phrase was from journals he’d read before the war, theoretical texts. Not for steam. For controlling the paths of charged particles.</p>
+  
+  <p>Memory bled in, not of the river, but of his own workshop in Dresden. The satisfying heft of a torque wrench in his hand, the precise click as a bolt reached its specified tension. The clean, solvable problem of a faulty pressure gauge. A world of logic and order.</p>
+  
+  <p>This was not that. This was the buzz of the cyclotron, the smell of ozone, the bound wrists, the throbbing in his head. The image of Rudolf falling, the dark bloom of blood on his coat sleeve.</p>
+  
+  <p>“The man,” Friedrich croaked, his voice a stranger’s. “Rudolf Wagner. What happened to him?”</p>
+  
+  <p>The two scientists exchanged a glance. The younger one shrugged slightly. “The wounded soldier? He was taken to the infirmary. His utility is limited.”</p>
+  
+  <p>The answer was no answer at all. It was a dismissal. Rudolf was a variable they had already factored out of their equation.</p>
+  
+  <p>The older man stepped close again. “Do you understand the offer, Engineer Schumann? We are not asking you to fight. We are asking you to build. To calculate. To contain forces that few men can even comprehend.” He paused, letting the sound of the machinery fill the silence. “The alternative is a bullet in the snow. A waste of a perfectly good mind.”</p>
+  
+  <p>Friedrich looked past them, at the workbench. Among the tools was a standard engineer’s slide rule. A simple thing. Wood and plastic. It represented a world where problems had solutions, where forces could be measured and mastered. The world he loved.</p>
+  
+  <p>He closed his eyes. He saw the river, silvered by moonlight. The notebook in his pocket, its pages filled with words that were a different kind of equation, one for which there was no solution. He saw Greta’s suspicious eyes, his sons’ sleeping faces.</p>
+  
+  <p>He saw Rudolf’s blood on the snow.</p>
+  
+  <p>There was no choice. There was only survival, and the desperate, pathetic hope that if he complied, he might yet learn what had become of the man he loved. That he might, somehow, find a way back to the river.</p>
+  
+  <p>He opened his eyes. The single bulb swayed, making the shadows lurch.</p>
+  
+  <p>“What,” he asked, his voice flat, hollowed out, “do you need me to do?”</p>
+  
+  <p>The older scientist smiled. It did not touch his eyes. “We need you to help us build a better cage.”</p>
+  <hr>
+  
+  <h2>CHAPTER IV<br>THE CALIBRATION</h2>
+  
+  <p>The descent was blind.</p>
+  
+  <p>Friedrich felt each step through the soles of his boots, counted the iron rungs by touch, twenty, thirty, forty, before a hand shoved him down onto a stone floor. The hood came off with a tug. Light stabbed his eyes. Not daylight, never daylight; an electric arc lamp buzzing overhead, its mercury vapor giving everything a greenish cast.</p>
+  
+  <p>The room was not a cell but a corridor. Brick vaulting overhead, damp, lime-streaked. A whiff of iodine, phenol, and burnt insulation. To the left, steel doors with small inspection hatches. To the right, a heavy sliding blast door, riveted plates painted with stenciled letters in German and Russian: “DANGER – <em>ELEKTRISCHER STROM</em> – <em>ОПАСНО</em> – <em>ВЫСОКОЕ НАПРЯЖЕНИЕ</em>.”</p>
+  
+  <p>The guards did not speak. Feldgrau uniforms, but armbands he did not recognize. One carried a <em>Mauser C96</em> with the stock attached, the other a <em>Mosin-Nagant M91</em> rifle, Russian. Collaboration, then. A hybrid force. He registered the detail and stored it away like an equation to solve later.</p>
+  
+  <p>They pushed him into a room.</p>
+  
+  <p>Bare brick, concrete floor, a drain in the middle. Against one wall, a steel table with straps. Against the other, a bench cluttered with tools: rubber hoses, a dynamo crank, jars of clear solution labeled in both alphabets. Carbolic acid. Potassium chloride. Mercury fulminate. The smell was sharp, metallic.</p>
+  
+  <p>And waiting for him, the same two men from before. The older one, spectacles glinting, white hair combed flat, voice as sharp as a lathe. The younger one, bearded, notebook in hand, eyes bright with restless hunger.</p>
+  
+  <p>“Engineer Schumann,” the older one said. His German had no accent, Saxon perhaps. “You understand now that this is not a prison. It is a laboratory. And you, unfortunately, are both subject and instrument.”</p>
+  
+  <p>Friedrich’s wrists were freed only long enough to bind him again, this time spread on the table, straps across his chest, thighs, and ankles. The leather was cracked but strong. He did not resist. Resistance was wasted energy, and he had learned in Verdun the arithmetic of energy: conserve until it matters.</p>
+  
+  <p>The bearded one cranked the dynamo. The sound was familiar: the rising whine of a hand-turned magneto, the kind used to spark an ignition coil. Copper wire wound tight, iron core, predictable. The predictable was almost a comfort. Until the electrodes pressed against his skin.</p>
+  
+  <p>The shock ripped him like a bayonet. His back arched, teeth clamped. The taste of iron flooded his mouth. The young one watched his body spasm, then checked his pulse with clinical detachment.</p>
+  
+  <p>“Conduction normal,” he murmured, writing in his notebook. “Skin resistance declining after initial burst. Repeat with saline.”</p>
+  
+  <p>They dabbed his temples with salt water. The next jolt was worse. He bit his tongue, blood pooling.</p>
+  
+  <p>The older one leaned over. “Do not think of this as punishment. It is calibration. Every system must be measured before it can be applied. Steam, voltage, blood; it makes no difference.”</p>
+  
+  <p>The shocks came in intervals, timed like artillery barrages. He drifted in and out. Memory bled into sensation: the whine of the dynamo became the scream of shells at Verdun, the stink of ozone became cordite in a trench. He saw Rudolf’s face, dirt-streaked, lit by muzzle flashes. He heard Greta’s voice, distant, calling the boys in for supper. Then another surge tore it away.</p>
+  
+  <p>When at last the current stopped, he lay trembling, breath shallow, muscles twitching on their own. The straps were wet with his sweat.</p>
+  
+  <p>The older man nodded, satisfied. “Thresholds are mapped. Now we test application.”</p>
+  
+  <p>They unstrapped him, half-carried him into the next chamber.</p>
+  
+  <p>This one was worse. A workshop, yes, but grotesque. Against the wall stood a crude particle apparatus: a circular track of iron, copper coils wound around it, glass vacuum tubes glowing faintly with the discharge of a <em>Ruhmkorff</em> coil. The thing hummed with stored energy. Not a true cyclotron, too primitive, too early; but a low-voltage accelerator, the kind a physicist might sketch on paper, never meant to be assembled in a cellar beneath Chernobyl.</p>
+  
+  <p>Beside it: <em>cages</em>. <em>Not for animals</em>. <em>Too large</em>.</p>
+  
+  <p>The older scientist saw Friedrich’s eyes fix there. “Yes. Human material. Russians mostly. Prisoners of the revolution, the wrong faction at the wrong time. They break quickly. You may not.”</p>
+  
+  <p>A guard opened one cage. A man stumbled out, thin as wire, eyes sunken. His arms bore burns, old and new. The bearded scientist guided him to the device, strapped metal bands around his chest and head, electrodes positioned along his spine.</p>
+  
+  <p>“Observe,” he said.</p>
+  
+  <p>The coils powered up. The buzz deepened, a pressure in the skull. A smell of ozone thickened. Then the man screamed. His body convulsed, skin blistering where the electrodes touched. Friedrich watched, unable to look away, as the arcs leapt between the coils and flesh, crawling blue fire. The man sagged, unconscious or dead.</p>
+  
+  <p>The younger scientist noted something, unfazed. “Magnetic containment weak. Insufficient shielding. Engineer Schumann, you understand pressure systems. How would you prevent field leakage?”</p>
+  
+  <p>It was obscene, the casual shift from torture to problem-solving. Friedrich’s mouth opened. His voice was hoarse, broken. “Field coils… need symmetry. Iron core… saturates too fast. Use laminated steel. Staggered winding.”</p>
+  
+  <p>The words came without consent. Reflex. He hated himself for speaking, hated the precise click of logic in his mind even now. But the older man smiled faintly, as if a student had finally answered correctly.</p>
+  
+  <p>“You see? Even broken bodies yield progress. But an engineer, that is efficiency.”</p>
+  
+  <p>The experiments did not stop.</p>
+  
+  <p>Days blurred into each other. Friedrich was kept half-fed, half-warm, enough to function but never enough to recover. They alternated pain and questions, using the body as lever against the mind. Electric shock. Cold immersion, submerged to the chest in a tank of icy water until his lips turned blue and teeth rattled uncontrollably. Forced wakefulness, arc lamps glaring down while guards marched him in circles until he collapsed.</p>
+  
+  <p>Each time, the questions circled the same axis: pressure, containment, conductivity. They spoke of protons, of Rutherford’s gold-foil experiments, of alpha decay. Words Friedrich had seen only in journals before the war, when the world had still been sane.</p>
+  
+  <p>“Imagine,” the bearded one said one night, eyes shining fever-bright, “a weapon not of shrapnel but of atoms. Not TNT, but the splitting of the smallest parts. A furnace a thousand times Verdun in a single flash.”</p>
+  
+  <p>Friedrich shook, not from cold this time but from knowing he was standing on the lip of something monstrous. He thought of his boys, of Greta, of the river. A world that would burn before they ever grew to men.</p>
+  
+  <p>He tried silence. Silence brought the hose, water forced down until he choked and vomited. He tried lies. Lies brought the electrodes again, longer this time, precise increments until his vision whitened. The only thing that spared him was the engineer’s instinct that refused to die. He answered their technical puzzles because not answering was worse. Each solution bought him another day. Survival reduced to equations.</p>
+  
+  <p>One evening they brought in a rifle. A <em>Gewehr 98</em>, bolt open, chamber empty. They laid it on the table beside him.</p>
+  
+  <p>“You know weapons,” the older one said. “Explain the failure modes.”</p>
+  
+  <p>Friedrich blinked at it, numb. He listed them. Extractor wear. Weak firing pin spring. Barrel warping under sustained heat. His voice was flat, mechanical.</p>
+  
+  <p>The young one nodded eagerly. “Now translate. Same principles. A rifle barrel is a pressure vessel. A boiler is a pressure vessel. A particle tube is a pressure vessel. Containment, release. Always the same language.”</p>
+  
+  <p>They were building a new rifle, Friedrich realized, one that fired not lead but light. And they wanted him to be the machinist.</p>
+  
+  <p>In the nights, if they were nights, he could not tell without windows, he lay on the cot in his cell, tracing the cracks in the plaster with his eyes. He replayed the riverbank in his mind, Rudolf’s hand on his wrist, the whispered promise of tomorrow. He clung to it as one clings to a gauge needle holding steady under stress, the last sign that the system has not failed completely.</p>
+  
+  <p>But every day in the furnace below chipped that away.</p>
+  
+  <p>The worst was not his own suffering. It was when they made him watch others. A Polish boy, barely twenty, strapped to the coils. A Russian woman, her face impassive even as the current tore screams from her throat. Each time they asked him to calculate improvements, efficiency, optimization. He hated himself for seeing the flaws. For thinking, <em>yes, that coil would arc less if wound tighter, that electrode would burn slower if silver-plated.</em></p>
+  
+  <p><em>It was Verdun again: timber bracing in mud walls, futile engineering in a place where nothing could be saved. Only here, the mud was flesh.</em></p>
+  
+  <p>One night, the older scientist sat across from him, spectacles catching the arc-light glare.</p>
+  
+  <p>“You think we are cruel,” he said evenly. “But cruelty is only the cost of progress. You of all men should understand. How many boys were boiled alive in locomotive accidents before the boiler code was standardized? Hundreds. Thousands. Safety was bought with blood. This is no different.”</p>
+  
+  <p>Friedrich said nothing. His lips were cracked, his throat raw. But in his mind he argued: a broken gauge was not a broken man. A blown rivet was not a burning child. Yet the words stayed locked.</p>
+  
+  <p>Because he knew the truth: every system had a failure point. Including him.</p>
+  <hr>
+  
+  <h2>CHAPTER V<br>CRITICAL MASS</h2>
+  
+  <p>The body was no longer his. It was a shell wired to machines, fluids pumped in, fluids drained out. A lattice of glass tubing fed into the crook of his arm, the needle corroded steel, blunt-tipped, forced into his vein again and again until the skin was a ruined landscape of puncture marks. The saline carried more than salt: glucose, morphine, and the thin, metallic tang of uranium salts suspended in colloid. His blood was not blood. It was a slurry.</p>
+  
+  <p>He lay on the iron gurney, wrists strapped, torso pinned by leather belts. His breath rattled through cracked lips. Each inhalation stank of ozone, copper wire, phenol disinfectant. Each exhalation carried a hiss, as though his lungs leaked steam. He was not a man. He was a boiler under pressure, seams stretched, rivets shrieking.</p>
+  
+  <p>The bulb above him buzzed, fed by a dynamo wound in the next room. Shadows jittered on the walls. Beyond, muffled voices, the scrape of chalk across slate, calculations scrawled in white lines that would outlast him. Equations of containment, decay constants, half-lives.</p>
+  
+  <p>“Dosimetry reading?” The voice was sharp, German precise.</p>
+  
+  <p>“Two point three rads per hour at surface. Climbing.”</p>
+  
+  <p>“Good. Push it.”</p>
+  
+  <p>A switch clacked. A coil hummed, deep bass, resonant in his teeth and bones. The cyclotron spun up again. A fan of copper magnets whirled, accelerating ions until they screamed into the chamber. A pale arc of Cherenkov light bled into his vision. They were feeding it through him. He was the target. His flesh, his marrow, a crude detector.</p>
+  
+  <p>He twitched, tried to arch away, but the straps held. His muscles convulsed, jaw clamping until molars cracked. A chemical taste filled his mouth; blood and copper, mingled.</p>
+  
+  <p>And then, <em>hallucination</em>. Not Greta’s lavender sachets, not the boys snoring. No, sharper. Greta’s face bent over him, her eyes rimmed with suspicion.</p>
+  
+  <p>“You mock them,” she whispered, lips not moving. “Heinrich wants medicine. Franz wants physics. You laugh. You call them dreamers. You call them fools.”</p>
+  
+  <p>He tried to shake his head. The strap cut into his temple. His breath rasped, chest seizing.</p>
+  
+  <p>The vision sharpened: Heinrich at the table, fifteen, hair too long, eyes bright with diagrams. “The heart is a pump, Vater. Four chambers. If you could model the pressures—”</p>
+  
+  <p>And Friedrich, years earlier, laughing through a mouthful of bread. “Doctors starve, boy. You want to be poor? You want to waste your hands with paper instead of iron?”</p>
+  
+  <p>The memory struck like shrapnel. He coughed, gagged, bile rising. His own words, heavy as slag, choking him now.</p>
+  
+  <p>Another vision: Franz with chalk, tracing orbits on the slate, Bohr’s circles, electrons leaping. “See, Vater? If light is quanta—”</p>
+  
+  <p>And Friedrich’s voice again, harsh, impatient: “Physics? There’s no coin in it. Go to the factory. Machines don’t lie. They pay.”</p>
+  
+  <p>Franz’s chalk snapped. Silence.</p>
+  
+  <p>The guilt was a deeper poison than the uranium in his blood. He had killed them before they even began. Not with gas, not with rifles, but with ridicule, with dismissal. He had strangled their futures with his own calloused hands.</p>
+  
+  <p>He groaned, tried to reach out, but his hands were strapped. The leather bit into his wrists, blood slick against the cuffs.</p>
+  
+  <p>The voices around him continued, clinical. “Note the subject’s increased metabolic rate. Temperature rising, forty-one point eight Celsius.”</p>
+  
+  <p>“He is reaching critical threshold.”</p>
+  
+  <p>“Good. Maintain.”</p>
+  
+  <p>Another jolt from the cyclotron. His spine bowed. He tasted ozone. His vision blurred, then cleared, Rudolf.</p>
+  
+  <p>Not in uniform now, not mud-smeared from Verdun. Rudolf as he had been by the river, coat collar high, lantern shuttered, eyes dark as the current.</p>
+  
+  <p>“Friedrich,” the vision said. Voice low, certain. “You are not a machine.”</p>
+  
+  <p>The words were impossible. He <em>was</em> a machine. A boiler, a pump, a crude reactor harnessed by men in spectacles.</p>
+  
+  <p>Rudolf’s hand lifted, pale against the dark. Reaching. Steady.</p>
+  
+  <p>Friedrich sobbed, a raw animal sound, chest tearing. He lifted his own arm, straps biting, flesh tearing free as he pulled. Skin split, blood sheeted. But his hand rose, trembling, skeletal, reaching.</p>
+  
+  <p>The cyclotron roared, a low thunder, particles screaming around copper coils. His body convulsed. Cells split, DNA shredded by invisible knives.</p>
+  
+  <p>Rudolf’s hand was close, so close.</p>
+  
+  <p>“Almost,” Rudolf said.</p>
+  
+  <p>Friedrich stretched. His fingertips burned, white-hot, the marrow inside them boiling.</p>
+  
+  <p>And then it happened.</p>
+  
+  <p>The body, wired and salted, forced beyond design, passed into runaway. A reactor without containment. Protons and neutrons spilled from him like sparks from a furnace, a cascade unchecked. His heart, already a pump, became a detonator. The blood in his veins superheated, flash-steam hammering against his arteries.</p>
+  
+  <p>The Geiger counters in the corner shrieked, needles slamming to maximum.</p>
+  
+  <p>“Control rods—” one scientist barked.</p>
+  
+  <p>“Too late—”</p>
+  
+  <p>He erupted. Not with fire, but with neutron flux. A human critical mass. The straps vaporized, leather curling into ash. The gurney’s steel legs buckled, glowed red, collapsed. The air filled with a blast of ionized particles, ozone, searing radiation invisible yet absolute.</p>
+  
+  <p>The walls cracked. The concrete vault trembled. Instruments shattered, glass raining down. The cyclotron spun once more, shrieked, then seized, bearings welded by the heat.</p>
+  
+  <p>And in the center, where Friedrich had been, was only light. A burst that seared shadows of men onto the wall, their outlines frozen like Pompeii.</p>
+  
+  <p>The ground shook. The marshes of Chernobyl drank the shock. A plume rose, silent at first, then roaring; a reactor collapse decades before history would remember it. The forest outside glowed faintly, pines shimmering in ghost-light. Birds fell mid-flight, wings singed though no fire touched them.</p>
+  
+  <p>Inside, silence. Instruments melted. Men gone.</p>
+  
+  <p>The body was gone. Only fragments of bone, charred to carbon, embedded in the wall like fossils of a future no one would name.</p>
+  
+  <p>But in the last fraction of a second, before the flash, Friedrich had seen it. Greta’s face, soft. Heinrich’s steady hands, not broken but healing. Franz’s chalk not snapped, but sketching. And Rudolf, hand clasped with his own, firm, steady, pulling him free.</p>
+  
+  <p>Then nothing.</p>
+  
+  <p>Only collapse.</p>
+  <hr>
+  
+  <h2>CHAPTER VI<br>THE LAST SUNSET</h2>
+  
+  <p>The ruins smoked. The vault had fallen inward, concrete slabs angled like broken teeth. Rebar jutted out, blackened, still humming faintly with current. The forest outside glowed pale, trunks of pine bleached white as bone, needles dead, soil scorched. The air stank of iodine, burnt copper, ozone.</p>
+  
+  <p>He lay on the floor, naked but for scraps of cloth fused to his skin. He had screamed until his voice broke, but the scream went on inside him. A hollow sound, echoing, with no throat to carry it.</p>
+  
+  <p>He was alive. He should not have been.</p>
+  
+  <p>The men were gone, the machines silent. Only the crackle of cooling metal and the occasional groan of settling stone. His wrists bled where straps had been. His chest was striped with burns, flesh cracked like porcelain. He tried to rise. His knees buckled. He crawled.</p>
+  
+  <p>Hours passed. Or days. He could not tell. Time had shattered.</p>
+  
+  <p>When he finally stood outside the ruins, night had fallen. The sky was clear, stars sharp, cold. The marshes of Chernobyl lay silent. Not a bird, not a frog. Only stillness.</p>
+  
+  <p>He walked.</p>
+  
+  <p>And he did not stop.</p>
+  
+  <p>He walked west.</p>
+  
+  <p>Through the forests, across fields, over cracked roads. Villages lay silent, doors swinging in the wind, laundry still hanging though no hands remained to claim it. Dogs barked from a distance but would not come close. Men he passed turned away, unsettled by his figure, the burns on his skin, the silence he carried. Others saw only a vagrant, another soul ruined by the Zone.</p>
+  
+  <p>Days became weeks, weeks stretched into months. He crossed rivers, rail lines, borders. He stole bread when he had to, drank from streams, slept in ditches. Soldiers sometimes stopped him, rifles raised, but his stare was enough to send them back a step. He kept walking.</p>
+  
+  <p>By the time he reached Germany, autumn leaves were already falling. Roads were paved, wires strung tight between poles, neon buzzing over streets that no longer felt like his own. None of it slowed him. His eyes fixed on a single thought: home.</p>
+  
+  <p>Dresden.</p>
+  
+  <p>The street was narrower than he remembered. The houses older, blackened with soot, patched with new brick. His house sagged, roof covered in tar paper, windows changed. But it still stood.</p>
+  
+  <p>His hand trembled as he reached the door. He expected Greta, apron dusted with flour, face stern, hair pinned. He expected her to open, scold him, then soften, the way she once did.</p>
+  
+  <p>The door opened.</p>
+  
+  <p>Not Greta.</p>
+  
+  <p>An old man. Bent, hair thin, beard white. His eyes milky but sharp enough to see. He leaned on a cane, body trembling with age.</p>
+  
+  <p>Friedrich froze.</p>
+  
+  <p>The man stared. His lips quivered. Then his cane fell, clattering on the floor.</p>
+  
+  <p>“Vater?”</p>
+  
+  <p>The word struck like iron. The old man stumbled forward, arms out. Friedrich stumbled too, then they collided, arms clutching, the smell of dust and old wool. Heinrich pressed his face into Friedrich’s chest and sobbed like a child.</p>
+  
+  <p>“You didn’t age,” Heinrich whispered, voice cracked, astonished. “You… you didn’t change at all.”</p>
+  
+  <p>Friedrich’s own hands clutched harder. He could not speak. He could only hold.</p>
+  
+  <p>But then Heinrich stiffened. Slowly he pulled back. His wet eyes hardened, turned to stone. His jaw set.</p>
+  
+  <p>“You left us,” he hissed. “You left us with her. With nothing.”</p>
+  
+  <p>Friedrich’s mouth opened. No sound.</p>
+  
+  <p>Heinrich’s voice rose, harsh. “She had no job. No money. She begged, Vater. She sold her hands for scraps. And still she could not feed us. Do you know what that does? Do you know what hunger does to a woman?”</p>
+  
+  <p>Friedrich’s breath hitched.</p>
+  
+  <p>“She put her head in the oven,” Heinrich spat. His face twisted. “She left a note you never saw. She was ash before we even had a chance to hate you for it.”</p>
+  
+  <p>Friedrich staggered back. His knees nearly buckled.</p>
+  
+  <p>“And Franz—” Heinrich’s voice cracked. “Franz died of cancer. Fifty-nine years old. He wasted away, ribs like sticks, coughing blood. He kept asking for you. Right to the end. And you were nowhere.”</p>
+  
+  <p>Friedrich shook, tears finally coming, cutting tracks through the grime on his face.</p>
+  
+  <p>Heinrich’s hand trembled as it went to the corner. He pulled a long object from behind the door. A 12-gauge double barrel shotgun, blued steel, stock worn smooth with years of grip. He broke the barrel open, slid in shells, snapped it shut with finality.</p>
+  
+  <p>He leveled it at Friedrich’s chest.</p>
+  
+  <p>“You don’t deserve breath,” Heinrich growled. His finger brushed the trigger. His arms shook, but his eyes were steady.</p>
+  
+  <p>Friedrich lifted his hands, trembling. Words clawed at his throat but none came. He had no defense.</p>
+  
+  <p>The gun roared.</p>
+  
+  <p>But Friedrich was already gone, running. The blast tore wood where he had stood, plaster raining down. He stumbled into the street, the second blast tearing brick behind him. He kept running, lungs burning, heart screaming. He did not stop until blocks away, the echo of the shotgun still ringing in his skull.</p>
+  
+  <p>He collapsed in a phone booth on the corner of a lit street. His hands shook as he grabbed the book, pages thin and gray. He searched with a finger, letters blurring.</p>
+  
+  <p><em>Rudolf.</em></p>
+  
+  <p><em>There.</em></p>
+  
+  <p>He dialed with shaking hands, rotary clacking. The ring buzzed in his ear.</p>
+  
+  <p>A voice, tired, cautious, answered. “Caretaker.”</p>
+  
+  <p>Friedrich’s voice was broken, rasping. “Rudolf… Rudolf Wagner. Is he there?”</p>
+  
+  <p>The voice paused. Then: “He is here. We are taking care of him..”</p>
+  
+  <p>“Where.”</p>
+  
+  <p>An address. Words spilling. Friedrich dropped the receiver, let it swing. He staggered out.</p>
+  
+  <p>The home was quiet, brick walls clean, lamps warm. A caretaker opened the door, cautious, but stepped aside at the sight of him. She led him down a hall, the smell of antiseptic faint.</p>
+  
+  <p>The room was small, curtains drawn. A chair sat by the window. In it, Rudolf.</p>
+  
+  <p>Older. Hair thin, gray. Skin pale. Eyes white and useless. His hands rested on a blanket across his knees.</p>
+  
+  <p>Friedrich’s throat closed. He stumbled forward, fell to his knees. Tears ran unchecked.</p>
+  
+  <p>“Rudolf,” he whispered, voice breaking. “It’s me. I’m back.”</p>
+  
+  <p>Rudolf lifted his head, face blank at first. Then he raised a trembling hand, reached forward. His fingers brushed Friedrich’s cheek, tracing the lines, the bone.</p>
+  
+  <p>A slow smile spread on Rudolf’s face. “Friedrich,” he breathed. “You came back.”</p>
+  
+  <p>Friedrich clutched the hand to his face, sobbing. “I never left you. They took me. They broke me. But I came back.”</p>
+  
+  <p>Rudolf nodded slowly, hand trembling against Friedrich’s jaw. “I knew you would. I knew it.”</p>
+  
+  <p>Later, the caretaker left them. The two men sat on the balcony, side by side, rocking chairs creaking. The sun sank, bleeding orange across the rooftops. The air was cool.</p>
+  
+  <p>They did not speak much. Words had already been wasted by others, in other rooms. They only sat, the old wood creaking under them, the silence deep.</p>
+  
+  <p>The sun slid lower. Shadows stretched.</p>
+  
+  <p>Rudolf’s chair slowed, the rocking gentler, then still. His breath softened, faded. His head tilted slightly to one side. His lips parted as though to speak again. But no sound came.</p>
+  
+  <p>Friedrich turned, reached out. Rudolf’s hand was still warm. His chest no longer moved.</p>
+  
+  <p>Tears filled Friedrich’s eyes again, but his face was calm. He leaned forward, pressed his lips to Rudolf’s forehead, lingering.</p>
+  
+  <p>“Until we meet again, mein Freund,” he whispered. “You waited. You knew. Now I can carry you where they cannot follow.”</p>
+  
+  <p>The sun dropped below the horizon. The light dimmed. The balcony was quiet. One chair still rocked gently. The other was still.</p>
+  <hr>
+  
+  <h3>THE END.</h3>
+  
+  <h4>AUTHOR’S NOTE</h4>
+  <p>This story began as a dream I had last year. I set it aside for a long time because school kept me too busy to work on it. In July 2025, I finally returned to it. While finishing the draft, I reworked several parts to bring more emotional depth and give the story its own distinct feel. I don’t usually write novelettes this often, as my focus is on screenplays and film scripts, so this story is ready for adaptation into live-action whenever the timing feels right.</p>
+  
+  <h4>ACKNOWLEDGEMENT</h4>
+  <p>I would like to thank <strong>AIRA PRINCENA</strong> for making me believe that this story could become a novelette.</p>
+  
+  <h4>AUTHOR’S BIOGRAPHY</h4>
+  <p>Prince Dale has been writing stories since the age of five, with a particular passion for horror. He wrote his first novel, Starman, at sixteen, an unpublished work exploring and critiquing the country’s media and showbiz industry. When not writing, he spends his time programming, studying law, and exploring fields such as health sciences.</p>
+  
+  <hr>
+  <p><small>The title used in this work bears no connection, affiliation, or endorsement by the original creators or rights holders of the song "Moon River," composed by Henry Mancini with lyrics by Johnny Mercer, and is employed solely as a metaphorical device to reflect themes of secrecy, time, and enduring struggle within the narrative.</small></p>
+  <p><small>This is a work of fiction. Names, characters, events and incidents are either the products of the author's imagination or used in a fictitious manner. Any resemblance to actual persons, living or dead is purely coincidental.</small></p>
+</div>`,
     isHtml: true,
     keywords: ["war", "romance", "germany"],
   },
