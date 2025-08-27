@@ -26,25 +26,6 @@ type ReadingSettings = {
   theme: "light" | "sepia" | "dark";
 };
 
-const useDebounce = <T extends (...args: any[]) => any>(
-  callback: T,
-  delay: number
-) => {
-  const timeoutRef = React.useRef<NodeJS.Timeout | null>(null);
-
-  return React.useCallback(
-    (...args: Parameters<T>) => {
-      if (timeoutRef.current) {
-        clearTimeout(timeoutRef.current);
-      }
-      timeoutRef.current = setTimeout(() => {
-        callback(...args);
-      }, delay);
-    },
-    [callback, delay]
-  );
-};
-
 export default function StoryReader({ storyId, initialStory }: { storyId: string, initialStory: Story | undefined }) {
   const router = useRouter();
   const [story, setStory] = React.useState<Story | null | undefined>(initialStory);
@@ -54,18 +35,15 @@ export default function StoryReader({ storyId, initialStory }: { storyId: string
     theme: "light",
   });
   const contentRef = React.useRef<HTMLDivElement>(null);
-  const [chapterElements, setChapterElements] = React.useState<HTMLElement[]>([]);
+  const [chapters, setChapters] = React.useState<string[]>([]);
   const [currentChapterIndex, setCurrentChapterIndex] = React.useState(0);
 
   React.useEffect(() => {
-    // If the story wasn't found on the server, try to find it on the client
-    // (from localStorage).
     if (!initialStory) {
       const storyFromClient = getStoryFromBrowser(storyId);
       setStory(storyFromClient);
     }
     
-    // If it's still not found after checking client-side, redirect.
     if (!initialStory && !getStoryFromBrowser(storyId)) {
         setTimeout(() => router.push('/'), 1000);
     }
@@ -81,52 +59,35 @@ export default function StoryReader({ storyId, initialStory }: { storyId: string
   }, [settings]);
 
   React.useEffect(() => {
-    const contentEl = contentRef.current;
-    if (contentEl && story) {
-      const savedPosition = localStorage.getItem(`moon-river-bookmark-${story.id}`);
-      if (savedPosition) {
-        contentEl.scrollTop = parseFloat(savedPosition);
+    if (story) {
+      // Split content by chapter headings. Assumes chapters are separated by <hr> and start with <h2>
+      const chapterParts = story.content.split(/<hr[^>]*>/);
+      const storyChapters = chapterParts.slice(1); // Remove content before the first <hr>
+      setChapters(storyChapters);
+
+      // Load bookmarked chapter
+      const savedChapter = localStorage.getItem(`moon-river-bookmark-${story.id}`);
+      if (savedChapter) {
+        const chapterIndex = parseInt(savedChapter, 10);
+        if(chapterIndex >= 0 && chapterIndex < storyChapters.length) {
+            setCurrentChapterIndex(chapterIndex);
+        }
       }
-      
-      const chapterNodes = Array.from(contentEl.querySelectorAll('h2'));
-      setChapterElements(chapterNodes);
     }
   }, [story]);
 
-  const saveScrollPosition = useDebounce((scrollTop: number) => {
+  React.useEffect(() => {
+    // Bookmark the current chapter index
     if (story) {
-      localStorage.setItem(`moon-river-bookmark-${story.id}`, String(scrollTop));
+      localStorage.setItem(`moon-river-bookmark-${story.id}`, String(currentChapterIndex));
     }
-  }, 500);
-
-  const handleScroll = (e: React.UIEvent<HTMLDivElement>) => {
-    saveScrollPosition(e.currentTarget.scrollTop);
-    
-    const contentEl = e.currentTarget;
-    const { scrollTop, clientHeight } = contentEl;
-    const scrollCenter = scrollTop + clientHeight / 2;
-
-    const currentChapter = chapterElements.findIndex((chapterEl, index) => {
-        const nextChapterEl = chapterElements[index + 1];
-        if (nextChapterEl) {
-            return scrollCenter >= chapterEl.offsetTop && scrollCenter < nextChapterEl.offsetTop;
-        }
-        return scrollCenter >= chapterEl.offsetTop;
-    });
-
-    if (currentChapter !== -1 && currentChapter !== currentChapterIndex) {
-        setCurrentChapterIndex(currentChapter);
-    }
-  };
+    // Scroll to top on chapter change
+    contentRef.current?.scrollTo(0, 0);
+  }, [currentChapterIndex, story]);
   
-  const scrollToChapter = (index: number) => {
-    const chapterEl = chapterElements[index];
-    if(chapterEl && contentRef.current) {
-        contentRef.current.scrollTo({
-            top: chapterEl.offsetTop - 50, // a little offset from the top
-            behavior: 'smooth'
-        });
-        setCurrentChapterIndex(index);
+  const goToChapter = (index: number) => {
+    if (index >= 0 && index < chapters.length) {
+      setCurrentChapterIndex(index);
     }
   };
 
@@ -137,7 +98,6 @@ export default function StoryReader({ storyId, initialStory }: { storyId: string
   };
 
   if (story === undefined) {
-    // Story not found, will redirect
     return (
         <div className="container max-w-3xl mx-auto p-4 sm:p-8">
             <div className="text-center py-20">
@@ -148,8 +108,7 @@ export default function StoryReader({ storyId, initialStory }: { storyId: string
     );
   }
 
-  if (story === null) {
-      // Loading state
+  if (story === null || chapters.length === 0) {
     return (
         <div className="container max-w-3xl mx-auto p-4 sm:p-8">
             <div className="space-y-4">
@@ -165,14 +124,13 @@ export default function StoryReader({ storyId, initialStory }: { storyId: string
         </div>
     );
   }
-
-  const hasChapters = chapterElements.length > 0;
+  
+  const currentChapterHtml = chapters[currentChapterIndex];
 
   return (
     <div className={cn("fixed inset-0 z-50 transition-colors duration-300", themeClasses[settings.theme])}>
       <div
         ref={contentRef}
-        onScroll={handleScroll}
         className="h-full w-full overflow-y-auto"
         style={{
           fontSize: `${settings.fontSize}px`,
@@ -184,13 +142,7 @@ export default function StoryReader({ storyId, initialStory }: { storyId: string
                 {story.title}
             </h1>
             <p className="text-lg sm:text-xl text-current/70 mb-12">by {story.author}</p>
-            {story.isHtml ? (
-              <div className="prose-styles" dangerouslySetInnerHTML={{ __html: story.content }} />
-            ) : (
-              <div className="whitespace-pre-wrap font-body">
-                {story.content}
-              </div>
-            )}
+            <div className="prose-styles" dangerouslySetInnerHTML={{ __html: currentChapterHtml }} />
         </div>
       </div>
 
@@ -252,33 +204,31 @@ export default function StoryReader({ storyId, initialStory }: { storyId: string
         </Popover>
       </div>
 
-       {hasChapters && (
-        <div className="fixed bottom-4 left-1/2 -translate-x-1/2 flex items-center justify-center gap-2">
-          <Button
-            variant="ghost"
-            size="icon"
-            onClick={() => scrollToChapter(currentChapterIndex - 1)}
-            disabled={currentChapterIndex === 0}
-            className="rounded-full backdrop-blur-sm bg-black/10 hover:bg-black/20"
-          >
-            <ChevronLeft className="h-5 w-5" />
-            <span className="sr-only">Previous Chapter</span>
-          </Button>
-          <span className="text-sm tabular-nums px-3 py-1.5 rounded-full backdrop-blur-sm bg-black/10">
-            Chapter {currentChapterIndex + 1} / {chapterElements.length}
-          </span>
-          <Button
-            variant="ghost"
-            size="icon"
-            onClick={() => scrollToChapter(currentChapterIndex + 1)}
-            disabled={currentChapterIndex === chapterElements.length - 1}
-            className="rounded-full backdrop-blur-sm bg-black/10 hover:bg-black/20"
-          >
-            <ChevronRight className="h-5 w-5" />
-            <span className="sr-only">Next Chapter</span>
-          </Button>
-        </div>
-      )}
+      <div className="fixed bottom-4 left-1/2 -translate-x-1/2 flex items-center justify-center gap-2">
+        <Button
+          variant="ghost"
+          size="icon"
+          onClick={() => goToChapter(currentChapterIndex - 1)}
+          disabled={currentChapterIndex === 0}
+          className="rounded-full backdrop-blur-sm bg-black/10 hover:bg-black/20"
+        >
+          <ChevronLeft className="h-5 w-5" />
+          <span className="sr-only">Previous Chapter</span>
+        </Button>
+        <span className="text-sm tabular-nums px-3 py-1.5 rounded-full backdrop-blur-sm bg-black/10">
+          Chapter {currentChapterIndex + 1} / {chapters.length}
+        </span>
+        <Button
+          variant="ghost"
+          size="icon"
+          onClick={() => goToChapter(currentChapterIndex + 1)}
+          disabled={currentChapterIndex === chapters.length - 1}
+          className="rounded-full backdrop-blur-sm bg-black/10 hover:bg-black/20"
+        >
+          <ChevronRight className="h-5 w-5" />
+          <span className="sr-only">Next Chapter</span>
+        </Button>
+      </div>
     </div>
   );
 }
