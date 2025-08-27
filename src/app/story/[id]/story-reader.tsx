@@ -11,6 +11,7 @@ import { Label } from "@/components/ui/label";
 import { ArrowLeft, Cog, Minus, Plus } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { Skeleton } from "@/components/ui/skeleton";
+import { getStories, getStory } from "@/lib/stories";
 
 // Client-side only version of getStory
 function getStoryFromBrowser(id: string): Story | undefined {
@@ -18,15 +19,6 @@ function getStoryFromBrowser(id: string): Story | undefined {
   const uploadedStories: Story[] = JSON.parse(localStorage.getItem("moon-river-stories") || "[]");
   return [...defaultStories, ...uploadedStories].find((story) => story.id === id);
 }
-
-// Dummy getStories for client-side use, as the real one has server-side logic now.
-function getStories(): Story[] {
-  // In a real app, you might fetch this from an API, but for this context,
-  // we'll just return an empty array and rely on what's passed from the server
-  // or what's in localStorage.
-  return [];
-}
-
 
 type ReadingSettings = {
   fontSize: number;
@@ -107,7 +99,7 @@ export default function StoryReader({ storyId, initialStory }: { storyId: string
   };
 
   const themeClasses = {
-    light: "bg-[#F0E6D2] text-[#4A403A]",
+    light: "bg-[#FDF6E3] text-[#586E75]",
     sepia: "bg-[#FBF0D9] text-[#5B4636]",
     dark: "bg-[#1E1E1E] text-[#D4D4D4]",
   };
