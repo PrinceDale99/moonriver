@@ -2,16 +2,31 @@
 
 import * as React from "react";
 import { useRouter } from "next/navigation";
-import { getStory } from "@/lib/stories";
 import { type Story } from "@/types";
 import { Button } from "@/components/ui/button";
 import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover";
 import { Slider } from "@/components/ui/slider";
 import { ToggleGroup, ToggleGroupItem } from "@/components/ui/toggle-group";
 import { Label } from "@/components/ui/label";
-import { ArrowLeft, Cog, Minus, Plus, Rows, Columns } from "lucide-react";
+import { ArrowLeft, Cog, Minus, Plus } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { Skeleton } from "@/components/ui/skeleton";
+
+// Client-side only version of getStory
+function getStoryFromBrowser(id: string): Story | undefined {
+  const defaultStories = getStories();
+  const uploadedStories: Story[] = JSON.parse(localStorage.getItem("moon-river-stories") || "[]");
+  return [...defaultStories, ...uploadedStories].find((story) => story.id === id);
+}
+
+// Dummy getStories for client-side use, as the real one has server-side logic now.
+function getStories(): Story[] {
+  // In a real app, you might fetch this from an API, but for this context,
+  // we'll just return an empty array and rely on what's passed from the server
+  // or what's in localStorage.
+  return [];
+}
+
 
 type ReadingSettings = {
   fontSize: number;
@@ -38,9 +53,9 @@ const useDebounce = <T extends (...args: any[]) => any>(
   );
 };
 
-export default function StoryReader({ storyId }: { storyId: string }) {
+export default function StoryReader({ storyId, initialStory }: { storyId: string, initialStory: Story | undefined }) {
   const router = useRouter();
-  const [story, setStory] = React.useState<Story | null>(null);
+  const [story, setStory] = React.useState<Story | null | undefined>(initialStory);
   const [settings, setSettings] = React.useState<ReadingSettings>({
     fontSize: 18,
     lineHeight: 1.7,
@@ -49,11 +64,15 @@ export default function StoryReader({ storyId }: { storyId: string }) {
   const contentRef = React.useRef<HTMLDivElement>(null);
 
   React.useEffect(() => {
-    const storyData = getStory(storyId);
-    if (storyData) {
-      setStory(storyData);
-    } else {
-        // if story not found after a short delay, redirect
+    // If the story wasn't found on the server, try to find it on the client
+    // (from localStorage).
+    if (!initialStory) {
+      const storyFromClient = getStoryFromBrowser(storyId);
+      setStory(storyFromClient);
+    }
+    
+    // If it's still not found after checking client-side, redirect.
+    if (!initialStory && !getStoryFromBrowser(storyId)) {
         setTimeout(() => router.push('/'), 1000);
     }
     
@@ -61,7 +80,7 @@ export default function StoryReader({ storyId }: { storyId: string }) {
     if (savedSettings) {
       setSettings(JSON.parse(savedSettings));
     }
-  }, [storyId, router]);
+  }, [storyId, router, initialStory]);
 
   React.useEffect(() => {
     localStorage.setItem("moon-river-settings", JSON.stringify(settings));
@@ -93,7 +112,20 @@ export default function StoryReader({ storyId }: { storyId: string }) {
     dark: "bg-[#1E1E1E] text-[#D4D4D4]",
   };
 
-  if (!story) {
+  if (story === undefined) {
+    // Story not found, will redirect
+    return (
+        <div className="container max-w-3xl mx-auto p-4 sm:p-8">
+            <div className="text-center py-20">
+                <h2 className="text-2xl font-semibold">Story not found</h2>
+                <p className="text-muted-foreground mt-2">Redirecting you to the library...</p>
+            </div>
+        </div>
+    );
+  }
+
+  if (story === null) {
+      // Loading state
     return (
         <div className="container max-w-3xl mx-auto p-4 sm:p-8">
             <div className="space-y-4">
