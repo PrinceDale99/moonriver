@@ -37,6 +37,7 @@ export default function StoryReader({ storyId, initialStory }: { storyId: string
   const contentRef = React.useRef<HTMLDivElement>(null);
   const [chapters, setChapters] = React.useState<string[]>([]);
   const [currentChapterIndex, setCurrentChapterIndex] = React.useState(0);
+  const [footer, setFooter] = React.useState<string>("");
 
   React.useEffect(() => {
     if (!initialStory) {
@@ -61,9 +62,12 @@ export default function StoryReader({ storyId, initialStory }: { storyId: string
   React.useEffect(() => {
     if (story) {
       // Split content by chapter headings. Assumes chapters are separated by <hr>
-      const chapterParts = story.content.split(/<hr[^>]*>/);
-      const storyChapters = chapterParts.slice(1, -1); // Exclude header and footer sections
+      const parts = story.content.split(/<hr[^>]*>/);
+      const storyChapters = parts.slice(1, -1);
+      const storyFooter = parts[parts.length - 1] || "";
+      
       setChapters(storyChapters);
+      setFooter(storyFooter);
 
       // Load bookmarked chapter
       const savedChapter = localStorage.getItem(`moon-river-bookmark-${story.id}`);
@@ -126,7 +130,6 @@ export default function StoryReader({ storyId, initialStory }: { storyId: string
   }
   
   const currentChapterHtml = chapters[currentChapterIndex];
-  const footerHtml = story.content.split(/<hr[^>]*>/).pop() || "";
 
 
   return (
@@ -139,7 +142,7 @@ export default function StoryReader({ storyId, initialStory }: { storyId: string
           lineHeight: settings.lineHeight,
         }}
       >
-        <div className="container max-w-3xl mx-auto p-4 sm:p-8 lg:py-24 pb-32">
+        <div className="container max-w-3xl mx-auto p-4 sm:p-8 lg:py-24 pb-40">
             <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold font-headline mb-2" style={{ lineHeight: 1.2 }}>
                 {story.title}
             </h1>
@@ -147,7 +150,7 @@ export default function StoryReader({ storyId, initialStory }: { storyId: string
             <div className="prose-styles" dangerouslySetInnerHTML={{ __html: currentChapterHtml }} />
 
             {currentChapterIndex === chapters.length - 1 && (
-              <div className="prose-styles mt-12" dangerouslySetInnerHTML={{ __html: footerHtml }} />
+              <div className="prose-styles mt-12" dangerouslySetInnerHTML={{ __html: footer }} />
             )}
         </div>
       </div>
