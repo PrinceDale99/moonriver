@@ -62,7 +62,7 @@ export default function StoryReader({ storyId, initialStory }: { storyId: string
     if (story) {
       // Split content by chapter headings. Assumes chapters are separated by <hr>
       const chapterParts = story.content.split(/<hr[^>]*>/);
-      const storyChapters = chapterParts.slice(1); // Remove content before the first <hr>
+      const storyChapters = chapterParts.slice(1, -1); // Exclude header and footer sections
       setChapters(storyChapters);
 
       // Load bookmarked chapter
@@ -126,6 +126,8 @@ export default function StoryReader({ storyId, initialStory }: { storyId: string
   }
   
   const currentChapterHtml = chapters[currentChapterIndex];
+  const footerHtml = story.content.split(/<hr[^>]*>/).pop() || "";
+
 
   return (
     <div className={cn("fixed inset-0 z-50 transition-colors duration-300", themeClasses[settings.theme])}>
@@ -143,11 +145,15 @@ export default function StoryReader({ storyId, initialStory }: { storyId: string
             </h1>
             <p className="text-lg sm:text-xl text-current/70 mb-12">by {story.author}</p>
             <div className="prose-styles" dangerouslySetInnerHTML={{ __html: currentChapterHtml }} />
+
+            {currentChapterIndex === chapters.length - 1 && (
+              <div className="prose-styles mt-12" dangerouslySetInnerHTML={{ __html: footerHtml }} />
+            )}
         </div>
       </div>
 
       <div className="fixed top-4 left-4">
-        <Button variant="ghost" size="icon" onClick={() => router.back()}>
+        <Button variant="ghost" size="icon" onClick={() => router.push('/')}>
           <ArrowLeft className="h-5 w-5" />
           <span className="sr-only">Back</span>
         </Button>
