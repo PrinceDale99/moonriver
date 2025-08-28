@@ -27,8 +27,17 @@ export default function Home() {
   }
 
   return (
-    <div className="flex flex-col items-center justify-center min-h-[calc(100vh-56px)] text-center p-4">
-      <div className="max-w-2xl w-full">
+    <div className="relative flex flex-col items-center justify-center min-h-[calc(100vh-56px)] text-center p-4 overflow-hidden">
+      <div 
+        className="absolute inset-0 z-0 opacity-10 dark:opacity-20"
+        style={{
+          backgroundImage: `
+            radial-gradient(circle at 25% 25%, hsl(var(--primary) / 0.1), transparent 40%),
+            radial-gradient(circle at 75% 75%, hsl(var(--primary) / 0.1), transparent 40%)
+          `,
+        }}
+      />
+      <div className="max-w-2xl w-full z-10">
         <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-headline font-bold tracking-tighter text-foreground">
           {story.title}
         </h1>
