@@ -11,13 +11,11 @@ import { Label } from "@/components/ui/label";
 import { ArrowLeft, ChevronLeft, ChevronRight, Cog, Minus, Plus } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { Skeleton } from "@/components/ui/skeleton";
-import { getStories } from "@/lib/stories";
+import { getStory } from "@/lib/stories";
 
 // Client-side only version of getStory
 function getStoryFromBrowser(id: string): Story | undefined {
-  const defaultStories = getStories();
-  const uploadedStories: Story[] = JSON.parse(localStorage.getItem("moon-river-stories") || "[]");
-  return [...defaultStories, ...uploadedStories].find((story) => story.id === id);
+  return getStory(id);
 }
 
 type ReadingSettings = {
@@ -36,9 +34,9 @@ export default function StoryReader({ storyId, initialStory }: { storyId: string
   });
   const contentRef = React.useRef<HTMLDivElement>(null);
   const [chapters, setChapters] = React.useState<string[]>([]);
-  const [currentChapterIndex, setCurrentChapterIndex] = React.useState(0);
   const [footer, setFooter] = React.useState<string>("");
-
+  const [currentChapterIndex, setCurrentChapterIndex] = React.useState(0);
+  
   React.useEffect(() => {
     if (!initialStory) {
       const storyFromClient = getStoryFromBrowser(storyId);
@@ -142,7 +140,7 @@ export default function StoryReader({ storyId, initialStory }: { storyId: string
           lineHeight: settings.lineHeight,
         }}
       >
-        <div className="container max-w-3xl mx-auto p-4 sm:p-8 lg:py-24 pb-40">
+        <div className="container max-w-3xl mx-auto p-4 sm:p-8 lg:py-24 pb-56">
             <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold font-headline mb-2" style={{ lineHeight: 1.2 }}>
                 {story.title}
             </h1>
