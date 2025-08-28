@@ -68,4 +68,7 @@
     font-family: theme('fontFamily.headline');
     line-height: 1.2;
   }
+  .prose-styles p {
+    @apply mb-4;
+  }
 }
