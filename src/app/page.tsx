@@ -5,7 +5,7 @@ import Link from "next/link";
 import { type Story } from "@/types";
 import { getStories } from "@/lib/stories";
 import { Button } from "@/components/ui/button";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, FileText, Star } from "lucide-react";
 
 export default function Home() {
   const [story] = React.useState<Story | undefined>(() => {
@@ -43,6 +43,20 @@ export default function Home() {
             <Button size="lg" className="text-lg h-12 px-10">
               Begin Reading
               <ArrowRight className="ml-2 h-5 w-5" />
+            </Button>
+          </Link>
+        </div>
+        <div className="mt-4 flex justify-center gap-4">
+          <Link href="https://docs.google.com/document/d/1PilTyVVG9WlX2lFtyyLLgXFhiwpxvX6evOlJiLOSQ_o/edit?usp=drivesdk" target="_blank" rel="noopener noreferrer">
+            <Button variant="outline">
+              <FileText className="mr-2 h-4 w-4" />
+              View in Docs
+            </Button>
+          </Link>
+          <Link href="https://codly.com/p/YpT2tEr" target="_blank" rel="noopener noreferrer">
+            <Button variant="outline">
+              <Star className="mr-2 h-4 w-4" />
+              Give a Review
             </Button>
           </Link>
         </div>
