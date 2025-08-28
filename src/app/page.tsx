@@ -45,7 +45,7 @@ export default function Home() {
           by {story.author}
         </p>
         <p className="mt-8 max-w-xl mx-auto text-base sm:text-lg text-foreground/80">
-          A story of love, war, and the relentless flow of time, where two souls are bound by a connection forged in the crucible of conflict.
+          Enjoy reading
         </p>
         <div className="mt-12">
           <Link href={`/story/${story.id}`}>
