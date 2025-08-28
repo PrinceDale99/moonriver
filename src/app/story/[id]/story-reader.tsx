@@ -24,6 +24,8 @@ type ReadingSettings = {
   theme: "light" | "sepia" | "dark";
 };
 
+type AnimationState = "idle" | "exiting";
+
 export default function StoryReader({ storyId, initialStory }: { storyId: string, initialStory: Story | undefined }) {
   const router = useRouter();
   const [story, setStory] = React.useState<Story | null | undefined>(initialStory);
@@ -33,9 +35,11 @@ export default function StoryReader({ storyId, initialStory }: { storyId: string
     theme: "light",
   });
   const contentRef = React.useRef<HTMLDivElement>(null);
+  const storyContentRef = React.useRef<HTMLDivElement>(null);
   const [chapters, setChapters] = React.useState<string[]>([]);
   const [footer, setFooter] = React.useState<string>("");
   const [currentChapterIndex, setCurrentChapterIndex] = React.useState(0);
+  const [animationState, setAnimationState] = React.useState<AnimationState>('idle');
   
   React.useEffect(() => {
     if (!initialStory) {
@@ -80,16 +84,22 @@ export default function StoryReader({ storyId, initialStory }: { storyId: string
 
   React.useEffect(() => {
     // Bookmark the current chapter index
-    if (story) {
+    if (story && animationState === 'idle') {
       localStorage.setItem(`moon-river-bookmark-${story.id}`, String(currentChapterIndex));
     }
     // Scroll to top on chapter change
-    contentRef.current?.scrollTo(0, 0);
-  }, [currentChapterIndex, story]);
+    if (animationState === 'idle') {
+        contentRef.current?.scrollTo(0, 0);
+    }
+  }, [currentChapterIndex, story, animationState]);
   
   const goToChapter = (index: number) => {
-    if (index >= 0 && index < chapters.length) {
-      setCurrentChapterIndex(index);
+    if (index >= 0 && index < chapters.length && index !== currentChapterIndex) {
+      setAnimationState('exiting');
+      setTimeout(() => {
+        setCurrentChapterIndex(index);
+        setAnimationState('idle');
+      }, 300); // Match animation duration
     }
   };
 
@@ -140,7 +150,13 @@ export default function StoryReader({ storyId, initialStory }: { storyId: string
           lineHeight: settings.lineHeight,
         }}
       >
-        <div className="container max-w-3xl mx-auto p-4 sm:p-8 lg:py-24 pb-56">
+        <div
+          ref={storyContentRef} 
+          className={cn(
+            "container max-w-3xl mx-auto p-4 sm:p-8 lg:py-24 pb-56",
+            animationState === 'exiting' ? 'fade-out' : 'fade-in'
+          )}
+        >
             <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold font-headline mb-2" style={{ lineHeight: 1.2 }}>
                 {story.title}
             </h1>
@@ -216,7 +232,7 @@ export default function StoryReader({ storyId, initialStory }: { storyId: string
           variant="ghost"
           size="icon"
           onClick={() => goToChapter(currentChapterIndex - 1)}
-          disabled={currentChapterIndex === 0}
+          disabled={currentChapterIndex === 0 || animationState === 'exiting'}
           className="rounded-full backdrop-blur-sm bg-black/10 hover:bg-black/20"
         >
           <ChevronLeft className="h-5 w-5" />
@@ -229,7 +245,7 @@ export default function StoryReader({ storyId, initialStory }: { storyId: string
           variant="ghost"
           size="icon"
           onClick={() => goToChapter(currentChapterIndex + 1)}
-          disabled={currentChapterIndex === chapters.length - 1}
+          disabled={currentChapterIndex === chapters.length - 1 || animationState === 'exiting'}
           className="rounded-full backdrop-blur-sm bg-black/10 hover:bg-black/20"
         >
           <ChevronRight className="h-5 w-5" />
