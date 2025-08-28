@@ -63,6 +63,7 @@
   }
   .prose-styles {
     font-family: theme('fontFamily.body');
+    user-select: none;
   }
   .prose-styles h1, .prose-styles h2, .prose-styles h3, .prose-styles h4, .prose-styles h5, .prose-styles h6 {
     font-family: theme('fontFamily.headline');
