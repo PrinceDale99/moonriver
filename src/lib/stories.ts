@@ -351,6 +351,8 @@ const stories: Story[] = [
     <h2 style="margin: 0; padding: 0; font-size: 1.1em; line-height: 1.5; letter-spacing: 0.1em; text-transform: uppercase;">Chapter V<br/>Critical Mass</h2>
   </div>
   
+  <p><i>April 26, 1986</i></p>
+
   <p>The body was no longer his. It was a shell wired to machines, fluids pumped in, fluids drained out. A lattice of glass tubing fed into the crook of his arm, the needle corroded steel, blunt-tipped, forced into his vein again and again until the skin was a ruined landscape of puncture marks. The saline carried more than salt: glucose, morphine, and the thin, metallic tang of uranium salts suspended in colloid. His blood was not blood. It was a slurry.</p>
   
   <p>He lay on the iron gurney, wrists strapped, torso pinned by leather belts. His breath rattled through cracked lips. Each inhalation stank of ozone, copper wire, phenol disinfectant. Each exhalation carried a hiss, as though his lungs leaked steam. He was not a man. He was a boiler under pressure, seams stretched, rivets shrieking.</p>
